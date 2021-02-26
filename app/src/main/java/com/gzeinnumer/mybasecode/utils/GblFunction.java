@@ -76,4 +76,14 @@ public class GblFunction {
                     " not found";
         }
     }
+
+    public static boolean validateFileSize(String path) {
+        File file = new File(path);
+
+        long fileSizeInBytes = file.length();
+        long fileSizeInKB = fileSizeInBytes / 1024;
+        long fileSizeInMB = fileSizeInKB / 1024;
+
+        return fileSizeInMB <= 20;
+    }
 }
