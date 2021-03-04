@@ -7,6 +7,7 @@
     - [BaseAlertDialog.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseAlertDialog.java)
     - [BaseDialogFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseDialogFragment.java)
     - [BaseFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseFragment.java)
+    - [BasePopUp.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BasePopUp.java)
   - utils
     - [BaseConstant.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/utils/BaseConstant.java)
     - [GblFunction.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/utils/GblFunction.java)
