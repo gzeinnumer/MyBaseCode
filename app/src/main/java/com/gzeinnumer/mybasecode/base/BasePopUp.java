@@ -29,7 +29,7 @@ public class BasePopUp {
                 .setButtonGravity(Gravity.CENTER)
                 .setContentAlignment(View.TEXT_ALIGNMENT_CENTER)
                 .setButtonStyle(ButtonStyle.ButtonContained)
-                .setButtonColor(R.color.colorPrimary)
+                .setButtonColor(fragmentActivity.getResources().getColor(R.color.colorPrimary))
                 .setBtnOkTitle("Ya")
                 .setBtnCancelTitle("Tidak");
     }
@@ -43,7 +43,7 @@ public class BasePopUp {
                 .setContentAlignment(View.TEXT_ALIGNMENT_CENTER)
                 .setTitleColor(fragmentActivity.getResources().getColor(R.color.black))
                 .setButtonStyle(ButtonStyle.ButtonContained)
-                .setButtonColor(R.color.colorPrimary)
+                .setButtonColor(fragmentActivity.getResources().getColor(R.color.colorPrimary))
                 .setDialogType(DialogType.DialogSuccess);
     }
 
