@@ -8,11 +8,11 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.gzeinnumer.da.dialog.confirmDialog.ConfirmDialog;
+import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
+import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
 import com.gzeinnumer.mybasecode.utils.BaseConstant;
 import com.gzeinnumer.mybasecode.utils.GblFunction;
-import com.gzeinnumer.mylibdialog.dialog.confirmDialog.ConfirmDialog;
-import com.gzeinnumer.mylibdialog.dialog.infoDialog.InfoDialog;
-import com.gzeinnumer.mylibdialog.dialog.loadingDialog.LoadingDialog;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
@@ -54,7 +54,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void onShowLoading() {
-        loadingDialog = BaseAlertDialog.LoadingDialog(getSupportFragmentManager(), getApplicationContext());
+        loadingDialog = BasePopUp.onShowLoading(getSupportFragmentManager(), this);
         loadingDialog.show();
     }
 
@@ -65,11 +65,11 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected ConfirmDialog onShowConfirmDialog() {
-        return BaseAlertDialog.ConfirmDialog(getSupportFragmentManager(),getApplicationContext());
+        return BasePopUp.onShowConfirmDialog(getSupportFragmentManager(), this);
     }
 
     protected InfoDialog onShowInfoDialog() {
-        return BaseAlertDialog.InfoDialog(getSupportFragmentManager(), getApplicationContext());
+        return BasePopUp.onShowInfoDialog(getSupportFragmentManager(), this);
     }
 
     protected void dummyAction(Class<?> clas) {

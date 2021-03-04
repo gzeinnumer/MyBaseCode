@@ -4,30 +4,28 @@ import android.content.Intent;
 
 import androidx.fragment.app.Fragment;
 
+import com.gzeinnumer.da.dialog.confirmDialog.ConfirmDialog;
+import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
+import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
 import com.gzeinnumer.mybasecode.utils.BaseConstant;
-import com.gzeinnumer.mylibdialog.dialog.confirmDialog.ConfirmDialog;
-import com.gzeinnumer.mylibdialog.dialog.infoDialog.InfoDialog;
-import com.gzeinnumer.mylibdialog.dialog.loadingDialog.LoadingDialog;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
 public class BaseFragment extends Fragment {
-    private LoadingDialog loadingDialog;
+    LoadingDialog loadingDialog;
 
     protected void intentTo(Class<?> clss) {
         startActivity(new Intent(requireContext(), clss));
         customType(requireContext(), BaseConstant.INTENT_ANIM_TYPE);
-        requireActivity().finish();
     }
 
     protected void intentToPut(Intent intent) {
         startActivity(intent);
         customType(requireContext(), BaseConstant.INTENT_ANIM_TYPE);
-        requireActivity().finish();
     }
 
     protected void onShowLoading() {
-        loadingDialog = BaseAlertDialog.LoadingDialog(requireActivity().getSupportFragmentManager(), requireContext());
+        loadingDialog = BasePopUp.onShowLoading(requireActivity().getSupportFragmentManager(), requireActivity());
         loadingDialog.show();
     }
 
@@ -38,10 +36,10 @@ public class BaseFragment extends Fragment {
     }
 
     protected ConfirmDialog onShowConfirmDialog() {
-        return BaseAlertDialog.ConfirmDialog(requireActivity().getSupportFragmentManager(), requireContext());
+        return BasePopUp.onShowConfirmDialog(requireActivity().getSupportFragmentManager(), requireActivity());
     }
 
     protected InfoDialog onShowInfoDialog() {
-        return BaseAlertDialog.InfoDialog(requireActivity().getSupportFragmentManager(), requireContext());
+        return BasePopUp.onShowInfoDialog(requireActivity().getSupportFragmentManager(), requireActivity());
     }
 }

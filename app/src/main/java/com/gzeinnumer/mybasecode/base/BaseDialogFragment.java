@@ -2,11 +2,11 @@ package com.gzeinnumer.mybasecode.base;
 
 import android.content.Intent;
 
+import com.gzeinnumer.da.dialog.confirmDialog.ConfirmDialog;
+import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
+import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
 import com.gzeinnumer.mybasecode.R;
 import com.gzeinnumer.mybasecode.utils.BaseConstant;
-import com.gzeinnumer.mylibdialog.dialog.confirmDialog.ConfirmDialog;
-import com.gzeinnumer.mylibdialog.dialog.infoDialog.InfoDialog;
-import com.gzeinnumer.mylibdialog.dialog.loadingDialog.LoadingDialog;
 import com.gzeinnumer.mylibdialogfragment.MyLibDialog;
 
 import static maes.tech.intentanim.CustomIntent.customType;
@@ -19,7 +19,7 @@ public class BaseDialogFragment extends MyLibDialog {
     }
 
     protected void onShowLoading() {
-        loadingDialog = BaseAlertDialog.LoadingDialog(requireActivity().getSupportFragmentManager(), requireContext());
+        loadingDialog = BasePopUp.onShowLoading(requireActivity().getSupportFragmentManager(), requireActivity());
         loadingDialog.show();
     }
 
@@ -30,11 +30,11 @@ public class BaseDialogFragment extends MyLibDialog {
     }
 
     protected ConfirmDialog onShowConfirmDialog() {
-        return BaseAlertDialog.ConfirmDialog(requireActivity().getSupportFragmentManager(), requireContext());
+        return BasePopUp.onShowConfirmDialog(requireActivity().getSupportFragmentManager(), requireActivity());
     }
 
     protected InfoDialog onShowInfoDialog() {
-        return BaseAlertDialog.InfoDialog(requireActivity().getSupportFragmentManager(), requireContext());
+        return BasePopUp.onShowInfoDialog(requireActivity().getSupportFragmentManager(), requireActivity());
     }
 
     protected void intentTo(Class<?> clss) {

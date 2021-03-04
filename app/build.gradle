@@ -40,7 +40,8 @@ dependencies {
     //intent animation
     implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
 
-    implementation 'com.github.gzeinnumer:MyLibDialog:2.2.2'
+    implementation 'com.github.gzeinnumer:DialogAndroid:3.1.0'
+    implementation 'com.github.gzeinnumer:SimpleMaterialStyle:2.0.0'
     implementation 'com.github.gzeinnumer:MyLibDialogFragment:1.0.1'
     implementation 'com.github.gzeinnumer:MyLibUtils:0.4.0'
     implementation 'com.github.gzeinnumer:MyLibDirectory:1.5.4'
