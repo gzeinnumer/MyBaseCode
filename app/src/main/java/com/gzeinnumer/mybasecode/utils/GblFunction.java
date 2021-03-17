@@ -71,10 +71,12 @@ public class GblFunction {
 
     public static String getSoftwareVersion(Context context) {
         try {
-            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+            if (isDebugActive())
+                return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName + ".debug";
+            else
+                return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
-            return "Package name" +
-                    " not found";
+            return "Package name not found";
         }
     }
 
