@@ -1,7 +1,11 @@
 package com.gzeinnumer.mybasecode.base;
 
+import android.content.Context;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -60,5 +64,23 @@ public class BasePopUp {
                 .setTimeZone("GMT")
                 .setTitle("Pilih tanggal")
                 .setTimeFormat("dd/MM/yyyy");
+    }
+
+    public static void onToastLongCenter(Context context, String msg) {
+        Toast toast = Toast.makeText(context, msg, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    public static void onShowCustomToast(FragmentActivity fragmentActivity, Context context, String msg) {
+        LayoutInflater inflater = fragmentActivity.getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_white, fragmentActivity.findViewById(R.id.custom_toast_layout_id));
+        TextView text = layout.findViewById(R.id.text);
+        text.setText(msg);
+        Toast toast = new Toast(context);
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
     }
 }

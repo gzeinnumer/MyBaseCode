@@ -19,6 +19,18 @@ public class BaseDialogFragment extends MyLibDialog {
         super(R.style.CustomDialogStyle);
     }
 
+    protected void intentTo(Class<?> clss) {
+        startActivity(new Intent(requireContext(), clss));
+        customType(requireActivity(), BaseConstant.INTENT_ANIM_TYPE);
+        requireActivity().finish();
+    }
+
+    protected void intentToPut(Intent intent) {
+        startActivity(intent);
+        customType(requireActivity(), BaseConstant.INTENT_ANIM_TYPE);
+        requireActivity().finish();
+    }
+
     protected void onShowLoading() {
         loadingDialog = BasePopUp.onShowLoading(requireActivity().getSupportFragmentManager(), requireActivity());
         loadingDialog.show();
@@ -30,14 +42,6 @@ public class BaseDialogFragment extends MyLibDialog {
         }
     }
 
-    protected void onToast(String msg) {
-        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show();
-    }
-
-    protected void onToastLong(String msg) {
-        Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show();
-    }
-
     protected ConfirmDialog onShowConfirmDialog() {
         return BasePopUp.onShowConfirmDialog(requireActivity().getSupportFragmentManager(), requireActivity());
     }
@@ -46,15 +50,19 @@ public class BaseDialogFragment extends MyLibDialog {
         return BasePopUp.onShowInfoDialog(requireActivity().getSupportFragmentManager(), requireActivity());
     }
 
-    protected void intentTo(Class<?> clss) {
-        startActivity(new Intent(requireContext(), clss));
-        customType(requireActivity(), BaseConstant.INTENT_ANIM_TYPE);
-        requireActivity().finish();
+    protected void onToast(String msg) {
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
-    protected void intentToPut(Intent intent) {
-        startActivity(intent);
-        customType(requireActivity(), BaseConstant.INTENT_ANIM_TYPE);
-        requireActivity().finish();
+    protected void onToastLong(String msg) {
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    protected void onToastLongCenter(String msg) {
+        BasePopUp.onToastLongCenter(getContext(), msg);
+    }
+
+    protected void onShowCustomToast(String msg) {
+        BasePopUp.onShowCustomToast(requireActivity(), requireContext(), msg);
     }
 }

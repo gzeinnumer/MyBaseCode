@@ -13,7 +13,7 @@ import com.gzeinnumer.mybasecode.utils.BaseConstant;
 import static maes.tech.intentanim.CustomIntent.customType;
 
 public class BaseFragment extends Fragment {
-    LoadingDialog loadingDialog;
+    private LoadingDialog loadingDialog;
 
     protected void intentTo(Class<?> clss) {
         startActivity(new Intent(requireContext(), clss));
@@ -25,6 +25,22 @@ public class BaseFragment extends Fragment {
         customType(requireContext(), BaseConstant.INTENT_ANIM_TYPE);
     }
 
+    protected void onToast(String msg) {
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    protected void onToastLong(String msg) {
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    protected void onToastLongCenter(String msg) {
+        BasePopUp.onToastLongCenter(getContext(), msg);
+    }
+
+    protected void onShowCustomToast(String msg) {
+        BasePopUp.onShowCustomToast(requireActivity(), requireContext(), msg);
+    }
+
     protected void onShowLoading() {
         loadingDialog = BasePopUp.onShowLoading(requireActivity().getSupportFragmentManager(), requireActivity());
         loadingDialog.show();
@@ -34,14 +50,6 @@ public class BaseFragment extends Fragment {
         if (loadingDialog != null) {
             loadingDialog.dismis();
         }
-    }
-
-    protected void onToast(String msg) {
-        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show();
-    }
-
-    protected void onToastLong(String msg) {
-        Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show();
     }
 
     protected ConfirmDialog onShowConfirmDialog() {

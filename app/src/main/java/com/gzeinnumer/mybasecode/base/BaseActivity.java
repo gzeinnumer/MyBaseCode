@@ -30,16 +30,16 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    protected void debugLocationActivity(View v, String TAG){
-        v.setOnClickListener(view -> {
-            GblFunction.debugLocationActivity(getApplicationContext(), TAG);
-        });
-    }
-
     @Override
     public void onBackPressed() {
 //        super.onBackPressed();
         customType(this, BaseConstant.INTENT_ANIM_TYPE);
+    }
+
+    protected void debugLocationActivity(View v, String TAG) {
+        v.setOnClickListener(view -> {
+            GblFunction.debugLocationActivity(getApplicationContext(), TAG);
+        });
     }
 
     protected void intentTo(Class<?> clss) {
@@ -54,6 +54,22 @@ public class BaseActivity extends AppCompatActivity {
         finish();
     }
 
+    protected void onToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    protected void onToastLong(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+    }
+
+    protected void onToastLongCenter(String msg) {
+        BasePopUp.onToastLongCenter(getApplicationContext(), msg);
+    }
+
+    protected void onShowCustomToast(String msg) {
+        BasePopUp.onShowCustomToast(this, getApplicationContext(), msg);
+    }
+
     protected void onShowLoading() {
         loadingDialog = BasePopUp.onShowLoading(getSupportFragmentManager(), this);
         loadingDialog.show();
@@ -65,52 +81,12 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    protected void onToast(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-    }
-
-    protected void onToastLong(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
-    }
-
     protected ConfirmDialog onShowConfirmDialog() {
         return BasePopUp.onShowConfirmDialog(getSupportFragmentManager(), this);
     }
 
     protected InfoDialog onShowInfoDialog() {
         return BasePopUp.onShowInfoDialog(getSupportFragmentManager(), this);
-    }
-
-    protected void dummyAction(Class<?> clas) {
-        onShowLoading();
-        Thread timer = new Thread() {
-            public void run() {
-                try {
-                    sleep(4000);
-                    onHideLoading();
-                    onShowInfoDialog().setTitle(BaseConstant.MSG_INFO).onOkPressedCallBack(() -> {
-                        intentTo(clas);
-                        finish();
-                    }).setContent("Dummy Message").show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        timer.start();
-    }
-
-    protected void dummyActionConfirm(Class<?> clas) {
-        onShowConfirmDialog()
-                .setTitle(BaseConstant.MSG_INFO)
-                .setContent("Dummy Message")
-                .onOkPressedCallBack(new ConfirmDialog.OnOkPressed() {
-                    @Override
-                    public void onOkPressed() {
-                        intentTo(clas);
-                    }
-                })
-                .show();
     }
 
 }

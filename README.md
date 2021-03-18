@@ -10,6 +10,9 @@
   - utils
     - [BaseConstant.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/utils/BaseConstant.java)
     - [GblFunction.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/utils/GblFunction.java)
+- res
+  - layout
+    - [toast_white.xml](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/res/layout/toast_white.xml)
 - gradle
   - [build.gradle](https://github.com/gzeinnumer/MyBaseCode/blob/master/build.gradle)
   - [build.gradle(app)](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/build.gradle)

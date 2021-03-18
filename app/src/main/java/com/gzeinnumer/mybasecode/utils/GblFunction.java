@@ -30,7 +30,7 @@ public class GblFunction {
         return MBUtilsDate.getCurrentTime("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
     }
 
-    public static boolean isDebugActive(){
+    public static boolean isDebugActive() {
         return BuildConfig.DEBUG;
     }
 
@@ -75,6 +75,14 @@ public class GblFunction {
                 return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName + ".debug";
             else
                 return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            return "Package name not found";
+        }
+    }
+
+    public static String getSoftwareVersionCode(Context context) {
+        try {
+            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             return "Package name not found";
         }
