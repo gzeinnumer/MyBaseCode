@@ -32,7 +32,7 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        super.onBackPressed();
+        super.onBackPressed();
         customType(this, BaseConstant.INTENT_ANIM_TYPE);
     }
 
