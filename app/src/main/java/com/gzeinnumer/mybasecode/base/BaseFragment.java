@@ -10,21 +10,18 @@ import com.gzeinnumer.da.dialog.datePickerDialog.multi.MultiDatePickerDialog;
 import com.gzeinnumer.da.dialog.datePickerDialog.single.SingleDatePickerDialog;
 import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
 import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
-import com.gzeinnumer.mybasecode.utils.BaseConstant;
-
-import static maes.tech.intentanim.CustomIntent.customType;
 
 public class BaseFragment extends Fragment {
     private LoadingDialog loadingDialog;
 
     protected void intentTo(Class<?> clss) {
         startActivity(new Intent(requireContext(), clss));
-        customType(requireContext(), BaseConstant.INTENT_ANIM_TYPE);
+//        customType(requireContext(), BaseConstant.INTENT_ANIM_TYPE);
     }
 
     protected void intentToPut(Intent intent) {
         startActivity(intent);
-        customType(requireContext(), BaseConstant.INTENT_ANIM_TYPE);
+//        customType(requireContext(), BaseConstant.INTENT_ANIM_TYPE);
     }
 
     protected void onToast(String msg) {

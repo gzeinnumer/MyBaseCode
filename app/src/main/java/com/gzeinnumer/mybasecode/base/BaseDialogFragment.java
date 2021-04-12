@@ -9,10 +9,7 @@ import com.gzeinnumer.da.dialog.datePickerDialog.single.SingleDatePickerDialog;
 import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
 import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
 import com.gzeinnumer.mybasecode.R;
-import com.gzeinnumer.mybasecode.utils.BaseConstant;
 import com.gzeinnumer.mylibdialogfragment.MyLibDialog;
-
-import static maes.tech.intentanim.CustomIntent.customType;
 
 public class BaseDialogFragment extends MyLibDialog {
     private LoadingDialog loadingDialog;
@@ -23,12 +20,12 @@ public class BaseDialogFragment extends MyLibDialog {
 
     protected void intentTo(Class<?> clss) {
         startActivity(new Intent(requireContext(), clss));
-        customType(requireActivity(), BaseConstant.INTENT_ANIM_TYPE);
+//        customType(requireActivity(), BaseConstant.INTENT_ANIM_TYPE);
     }
 
     protected void intentToPut(Intent intent) {
         startActivity(intent);
-        customType(requireActivity(), BaseConstant.INTENT_ANIM_TYPE);
+//        customType(requireActivity(), BaseConstant.INTENT_ANIM_TYPE);
     }
 
     protected void onShowLoading() {
