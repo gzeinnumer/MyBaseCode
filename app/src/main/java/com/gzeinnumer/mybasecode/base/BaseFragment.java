@@ -6,6 +6,8 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.gzeinnumer.da.dialog.confirmDialog.ConfirmDialog;
+import com.gzeinnumer.da.dialog.datePickerDialog.multi.MultiDatePickerDialog;
+import com.gzeinnumer.da.dialog.datePickerDialog.single.SingleDatePickerDialog;
 import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
 import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
 import com.gzeinnumer.mybasecode.utils.BaseConstant;
@@ -46,6 +48,11 @@ public class BaseFragment extends Fragment {
         loadingDialog.show();
     }
 
+    protected void onShowLoadingChild() {
+        loadingDialog = BasePopUp.onShowLoading(getChildFragmentManager(), requireActivity());
+        loadingDialog.show();
+    }
+
     protected void onHideLoading() {
         if (loadingDialog != null) {
             loadingDialog.dismis();
@@ -56,7 +63,31 @@ public class BaseFragment extends Fragment {
         return BasePopUp.onShowConfirmDialog(requireActivity().getSupportFragmentManager(), requireActivity());
     }
 
+    protected ConfirmDialog onShowConfirmDialogChild() {
+        return BasePopUp.onShowConfirmDialog(getChildFragmentManager(), requireActivity());
+    }
+
     protected InfoDialog onShowInfoDialog() {
         return BasePopUp.onShowInfoDialog(requireActivity().getSupportFragmentManager(), requireActivity());
+    }
+
+    protected InfoDialog onShowInfoDialogChild() {
+        return BasePopUp.onShowInfoDialog(getChildFragmentManager(), requireActivity());
+    }
+
+    protected SingleDatePickerDialog datePickerSingle() {
+        return BasePopUp.datePickerSingle(requireActivity().getSupportFragmentManager(), requireActivity());
+    }
+
+    protected SingleDatePickerDialog datePickerSingleChild() {
+        return BasePopUp.datePickerSingle(getChildFragmentManager(), requireActivity());
+    }
+
+    protected MultiDatePickerDialog datePickerMulti() {
+        return BasePopUp.datePickerMulti(requireActivity().getSupportFragmentManager(), requireActivity());
+    }
+
+    protected MultiDatePickerDialog datePickerMultiChild() {
+        return BasePopUp.datePickerMulti(getChildFragmentManager(), requireActivity());
     }
 }

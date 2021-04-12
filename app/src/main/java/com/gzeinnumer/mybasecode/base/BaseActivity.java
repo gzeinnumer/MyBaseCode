@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.gzeinnumer.da.dialog.confirmDialog.ConfirmDialog;
+import com.gzeinnumer.da.dialog.datePickerDialog.multi.MultiDatePickerDialog;
+import com.gzeinnumer.da.dialog.datePickerDialog.single.SingleDatePickerDialog;
 import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
 import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
 import com.gzeinnumer.mybasecode.utils.BaseConstant;
@@ -45,13 +47,11 @@ public class BaseActivity extends AppCompatActivity {
     protected void intentTo(Class<?> clss) {
         startActivity(new Intent(getApplicationContext(), clss));
         customType(this, BaseConstant.INTENT_ANIM_TYPE);
-        finish();
     }
 
     protected void intentToPut(Intent intent) {
         startActivity(intent);
         customType(this, BaseConstant.INTENT_ANIM_TYPE);
-        finish();
     }
 
     protected void onToast(String msg) {
@@ -87,6 +87,14 @@ public class BaseActivity extends AppCompatActivity {
 
     protected InfoDialog onShowInfoDialog() {
         return BasePopUp.onShowInfoDialog(getSupportFragmentManager(), this);
+    }
+
+    protected SingleDatePickerDialog datePickerSingle() {
+        return BasePopUp.datePickerSingle(getSupportFragmentManager(), this);
+    }
+
+    protected MultiDatePickerDialog datePickerMulti() {
+        return BasePopUp.datePickerMulti(getSupportFragmentManager(), this);
     }
 
 }
