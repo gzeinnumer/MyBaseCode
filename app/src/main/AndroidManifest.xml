@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.WhiteActivity"
+            android:theme="@style/Theme.MyBaseCode.White" />
+        <activity
+            android:name=".ui.ColorActivity"
+            android:theme="@style/Theme.MyBaseCode.Color" />
+        <activity
+            android:name=".ui.FullScreenActivity"
+            android:theme="@style/Theme.MyBaseCode.FullScreen" />
+        <activity
+            android:name=".ui.FullScreenColorActivity"
+            android:theme="@style/Theme.MyBaseCode.FullScreen.Color" />
+        <activity android:name=".ui.DefaultActivity" />
     </application>
 
 </manifest>

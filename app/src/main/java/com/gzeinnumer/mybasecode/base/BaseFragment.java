@@ -41,7 +41,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected void onShowLoading() {
-        loadingDialog = BasePopUp.onShowLoading(requireActivity().getSupportFragmentManager(), requireActivity());
+        loadingDialog = BasePopUp.onShowLoading(getChildFragmentManager(), requireActivity());
         loadingDialog.show();
     }
 
@@ -57,7 +57,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected ConfirmDialog onShowConfirmDialog() {
-        return BasePopUp.onShowConfirmDialog(requireActivity().getSupportFragmentManager(), requireActivity());
+        return BasePopUp.onShowConfirmDialog(getChildFragmentManager(), requireActivity());
     }
 
     protected ConfirmDialog onShowConfirmDialogChild() {
@@ -65,7 +65,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected InfoDialog onShowInfoDialog() {
-        return BasePopUp.onShowInfoDialog(requireActivity().getSupportFragmentManager(), requireActivity());
+        return BasePopUp.onShowInfoDialog(getChildFragmentManager(), requireActivity());
     }
 
     protected InfoDialog onShowInfoDialogChild() {
@@ -73,7 +73,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected SingleDatePickerDialog datePickerSingle() {
-        return BasePopUp.datePickerSingle(requireActivity().getSupportFragmentManager(), requireActivity());
+        return BasePopUp.datePickerSingle(getChildFragmentManager(), requireActivity());
     }
 
     protected SingleDatePickerDialog datePickerSingleChild() {
@@ -81,7 +81,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected MultiDatePickerDialog datePickerMulti() {
-        return BasePopUp.datePickerMulti(requireActivity().getSupportFragmentManager(), requireActivity());
+        return BasePopUp.datePickerMulti(getChildFragmentManager(), requireActivity());
     }
 
     protected MultiDatePickerDialog datePickerMultiChild() {

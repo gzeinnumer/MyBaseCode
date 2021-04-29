@@ -29,7 +29,7 @@ public class BaseDialogFragment extends MyLibDialog {
     }
 
     protected void onShowLoading() {
-        loadingDialog = BasePopUp.onShowLoading(requireActivity().getSupportFragmentManager(), requireActivity());
+        loadingDialog = BasePopUp.onShowLoading(getChildFragmentManager(), requireActivity());
         loadingDialog.show();
     }
 
@@ -45,7 +45,7 @@ public class BaseDialogFragment extends MyLibDialog {
     }
 
     protected ConfirmDialog onShowConfirmDialog() {
-        return BasePopUp.onShowConfirmDialog(requireActivity().getSupportFragmentManager(), requireActivity());
+        return BasePopUp.onShowConfirmDialog(getChildFragmentManager(), requireActivity());
     }
 
     protected ConfirmDialog onShowConfirmDialogChild() {
@@ -53,7 +53,7 @@ public class BaseDialogFragment extends MyLibDialog {
     }
 
     protected InfoDialog onShowInfoDialog() {
-        return BasePopUp.onShowInfoDialog(requireActivity().getSupportFragmentManager(), requireActivity());
+        return BasePopUp.onShowInfoDialog(getChildFragmentManager(), requireActivity());
     }
 
     protected InfoDialog onShowInfoDialogChild() {
