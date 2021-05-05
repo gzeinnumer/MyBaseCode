@@ -2,6 +2,9 @@ package com.gzeinnumer.mybasecode.utils;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -10,11 +13,14 @@ import com.gzeinnumer.gzndirectory.helper.FGFile;
 import com.gzeinnumer.gznutils.utils.MBUtilsDate;
 import com.gzeinnumer.mybasecode.BuildConfig;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.List;
 import java.util.Locale;
 
 public class GblFunction {
+
+    public static final String TAG = "GblFunction";
 
     public static void debugLocationActivity(Context applicationContext, String simpleName) {
         if (BuildConfig.DEBUG) {
