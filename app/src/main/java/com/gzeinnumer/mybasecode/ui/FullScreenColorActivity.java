@@ -12,6 +12,6 @@ public class FullScreenColorActivity extends BaseActivityFullScreenColor {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_screen_color);
 
-        setPaddingToTopParentView(findViewById(R.id.parent));
+//        setPaddingToTopParentView(findViewById(R.id.parent));
     }
 }

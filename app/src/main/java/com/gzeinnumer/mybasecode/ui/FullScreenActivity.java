@@ -13,6 +13,6 @@ public class FullScreenActivity extends BaseActivityFullScreen {
         setContentView(R.layout.activity_full_screen);
 
         //add this
-        setPaddingToTopParentView(findViewById(R.id.parent));
+//        setPaddingToTopParentView(findViewById(R.id.parent));
     }
 }
