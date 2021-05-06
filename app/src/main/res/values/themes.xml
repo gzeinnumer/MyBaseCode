@@ -22,7 +22,8 @@
     </style>
 
     <style name="Theme.MyBaseCode.Color">
-        <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/holo_green_light
+        </item>
         <item name="android:navigationBarColor">?attr/colorPrimaryVariant</item>
     </style>
 

@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.WhiteActivity"
+            android:name=".ui.WhiteNavigationActivity"
             android:theme="@style/Theme.MyBaseCode.White" />
         <activity
-            android:name=".ui.ColorActivity"
+            android:name=".ui.ColorNavigationActivity"
             android:theme="@style/Theme.MyBaseCode.Color" />
         <activity
             android:name=".ui.FullScreenActivity"

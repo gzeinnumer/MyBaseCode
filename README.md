@@ -4,11 +4,11 @@
   - base
     - [BaseActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseActivity.java)
     - baseActivity
-      - [BaseActivityColor.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityColor.java)
+      - [BaseActivityColorNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityColorNavigation.java)
       - [BaseActivityDefault.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityDefault.java)
       - [BaseActivityFullScreen.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityFullScreen.java)
       - [BaseActivityFullScreenColor.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityFullScreenColor.java)
-      - [BaseActivityWhite.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityWhite.java)
+      - [BaseActivityWhiteNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityWhiteNavigation.java)
     - [BaseDialogFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseDialogFragment.java)
     - [BaseFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseFragment.java)
     - [BasePopUp.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BasePopUp.java)

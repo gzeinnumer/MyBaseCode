@@ -1,6 +1,7 @@
 package com.gzeinnumer.mybasecode.base;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -13,7 +14,10 @@ import com.gzeinnumer.da.dialog.datePickerDialog.multi.MultiDatePickerDialog;
 import com.gzeinnumer.da.dialog.datePickerDialog.single.SingleDatePickerDialog;
 import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
 import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
+import com.gzeinnumer.mybasecode.utils.BaseConstant;
 import com.gzeinnumer.mybasecode.utils.GblFunction;
+
+import static maes.tech.intentanim.CustomIntent.customType;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -31,7 +35,9 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-//        customType(this, BaseConstant.INTENT_ANIM_TYPE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            customType(this, BaseConstant.INTENT_ANIM_TYPE);
+        }
     }
 
     protected void debugLocationActivity(View v, String TAG) {
@@ -42,12 +48,16 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void intentTo(Class<?> clss) {
         startActivity(new Intent(getApplicationContext(), clss));
-//        customType(this, BaseConstant.INTENT_ANIM_TYPE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            customType(this, BaseConstant.INTENT_ANIM_TYPE);
+        }
     }
 
     protected void intentToPut(Intent intent) {
         startActivity(intent);
-//        customType(this, BaseConstant.INTENT_ANIM_TYPE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            customType(this, BaseConstant.INTENT_ANIM_TYPE);
+        }
     }
 
     protected void onToast(String msg) {
