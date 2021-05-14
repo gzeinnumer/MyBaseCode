@@ -3,7 +3,6 @@ package com.gzeinnumer.mybasecode.base.response;
 
 import com.google.gson.annotations.SerializedName;
 
-
 /*
 {
    "status" : "1",
