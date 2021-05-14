@@ -23,7 +23,7 @@ import java.util.List;
 }
 */
 /*
-@GET("/users/{id}")
+@GET("")
 Call<Response<BaseListResponse<ResponseLogin>>> getUserCall();
  */
 public class BaseListResponse<T> {

@@ -15,7 +15,7 @@ import com.google.gson.annotations.SerializedName;
 }
 */
 /*
-@GET("/users/{id}")
+@GET("")
 Call<Response<BaseObjectResponse<ResponseLogin>>> getUserCall();
  */
 public class BaseObjectResponse<T> {
