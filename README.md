@@ -27,6 +27,11 @@
   - [build.gradle](https://github.com/gzeinnumer/MyBaseCode/blob/master/build.gradle)
   - [build.gradle(app)](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/build.gradle)
 
+**Preview** :
+
+| <img src="https://github.com/gzeinnumer/AndroidDropdown/blob/master/preview/example1.jpg"/>| <img src="https://github.com/gzeinnumer/AndroidDropdown/blob/master/preview/example2.jpg"/> |<img src="https://github.com/gzeinnumer/AndroidDropdown/blob/master/preview/example3.jpg"/> |
+|:---|:---|:---|
+
 ---
 
 ```
