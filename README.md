@@ -29,7 +29,7 @@
 
 **Preview** :
 
-| <img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example1.jpg"/>| <img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example2.jpg"/> | <img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example3.gif"/> |<img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example4.gif"/> |<img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example5.jpg"/> |
+| <img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example1.jpg" width="150"/>| <img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example2.jpg" width="150"/> | <img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example3.gif" width="150"/> |<img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example4.gif" width="150"/> |<img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example5.jpg" width="150"/> |
 |:---|:---|:---|:---|:---|
 |BaseActivityColorNavigation|BaseActivityDefault|BaseActivityFullScreen|BaseActivityFullScreenColor|BaseActivityWhiteNavigation|
 
