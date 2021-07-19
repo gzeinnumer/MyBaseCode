@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.gzeinnumer.da.dialog.confirmDialog.ConfirmDialog;
 import com.gzeinnumer.da.dialog.datePickerDialog.multi.MultiDatePickerDialog;
@@ -19,7 +18,7 @@ import com.gzeinnumer.mybasecode.utils.GblFunction;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends BasePermissionActivity {
 
     private LoadingDialog loadingDialog;
 
