@@ -1,5 +1,7 @@
 package com.gzeinnumer.mybasecode.base;
 
+import static maes.tech.intentanim.CustomIntent.customType;
+
 import android.content.Intent;
 import android.os.Build;
 import android.widget.Toast;
@@ -13,13 +15,15 @@ import com.gzeinnumer.edf.MyLibDialog;
 import com.gzeinnumer.mybasecode.R;
 import com.gzeinnumer.mybasecode.utils.BaseConstant;
 
-import static maes.tech.intentanim.CustomIntent.customType;
-
 public class BaseDialogFragment extends MyLibDialog {
     private LoadingDialog loadingDialog;
 
     public BaseDialogFragment() {
         super(R.style.CustomDialogStyle);
+    }
+
+    public BaseDialogFragment(int style) {
+        super(style);
     }
 
     protected void intentTo(Class<?> clss) {
