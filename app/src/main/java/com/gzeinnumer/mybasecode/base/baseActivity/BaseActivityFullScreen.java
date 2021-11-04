@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 
@@ -66,5 +67,6 @@ public class BaseActivityFullScreen extends BaseActivity {
         }
 
         getWindow().getDecorView().setSystemUiVisibility(decore);
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
     }
 }
