@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.gzeinnumer.mybasecode.base.BaseActivity;
 
-public class BaseActivityFullScreenColor extends BaseActivity {
+public class BaseActivityFullScreenWhiteWhite extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

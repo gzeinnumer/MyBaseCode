@@ -3,9 +3,9 @@ package com.gzeinnumer.mybasecode.ui;
 import android.os.Bundle;
 
 import com.gzeinnumer.mybasecode.R;
-import com.gzeinnumer.mybasecode.base.baseActivity.BaseActivityFullScreen;
+import com.gzeinnumer.mybasecode.base.baseActivity.BaseActivityFullScreenWhiteBlack;
 
-public class FullScreenActivity extends BaseActivityFullScreen {
+public class FullScreenActivity extends BaseActivityFullScreenWhiteBlack {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

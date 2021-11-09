@@ -4,11 +4,11 @@
   - base
     - [BaseActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseActivity.java)
     - baseActivity
-      - [BaseActivityColorNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityColorNavigation.java)
-      - [BaseActivityDefault.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityDefault.java)
-      - [BaseActivityFullScreen.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityFullScreen.java)
-      - [BaseActivityFullScreenColor.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityFullScreenColor.java)
-      - [BaseActivityWhiteNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityWhiteNavigation.java)
+      - [BaseActivityBlackBlackNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityBlackBlackNavigation.java)
+      - [BaseActivityBlackWhiteNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityBlackWhiteNavigation.java)
+      - [BaseActivityFullScreenWhiteBlack.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityFullScreenWhiteBlack.java)
+      - [BaseActivityFullScreenWhiteWhite.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityFullScreenWhiteWhite.java)
+      - [BaseActivityWhiteBlackNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityWhiteBlackNavigation.java)
     - [BaseDialogFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseDialogFragment.java)
     - [BaseFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseFragment.java)
     - [BasePopUp.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BasePopUp.java)
@@ -32,11 +32,11 @@
 
 | <img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example1.jpg" width="200"/>| <img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example2.jpg" width="200"/> | <img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example3.gif" width="200"/> |
 |:---|:---|:---|
-|BaseActivityColorNavigation|BaseActivityDefault|BaseActivityFullScreen|
+|BaseActivityBlackWhiteNavigation|BaseActivityWhiteBlackNavigation|BaseActivityFullScreenWhiteBlack|
 
 |<img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example4.gif" width="200"/> |<img src="https://github.com/gzeinnumer/MyBaseCode/blob/master/preview/example5.jpg" width="200"/> |
 |:---|:---|
-|BaseActivityFullScreenColor|BaseActivityWhiteNavigation|
+|BaseActivityFullScreenWhiteWhite|BaseActivityBlackBlackNavigation|
 
 ---
 

@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 import com.gzeinnumer.mybasecode.base.BaseActivity;
 
-public class BaseActivityColorNavigation extends BaseActivity {
+public class BaseActivityBlackWhiteNavigation extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

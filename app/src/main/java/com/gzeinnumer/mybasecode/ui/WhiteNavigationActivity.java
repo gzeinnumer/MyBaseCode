@@ -3,9 +3,9 @@ package com.gzeinnumer.mybasecode.ui;
 import android.os.Bundle;
 
 import com.gzeinnumer.mybasecode.R;
-import com.gzeinnumer.mybasecode.base.baseActivity.BaseActivityWhiteNavigation;
+import com.gzeinnumer.mybasecode.base.baseActivity.BaseActivityBlackBlackNavigation;
 
-public class WhiteNavigationActivity extends BaseActivityWhiteNavigation {
+public class WhiteNavigationActivity extends BaseActivityBlackBlackNavigation {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

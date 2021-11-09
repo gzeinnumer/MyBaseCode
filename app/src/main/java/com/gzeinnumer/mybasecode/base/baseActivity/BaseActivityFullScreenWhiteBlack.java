@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.gzeinnumer.mybasecode.base.BaseActivity;
 
-public class BaseActivityFullScreen extends BaseActivity {
+public class BaseActivityFullScreenWhiteBlack extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,11 +55,6 @@ public class BaseActivityFullScreen extends BaseActivity {
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 // Hide the nav bar and status bar
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            //enable this tho maker icon status bar become black
-//            decore += View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //enable this tho maker icon Navigation bar become black

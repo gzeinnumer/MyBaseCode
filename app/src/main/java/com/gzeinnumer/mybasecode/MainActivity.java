@@ -2,14 +2,14 @@ package com.gzeinnumer.mybasecode;
 
 import android.os.Bundle;
 
-import com.gzeinnumer.mybasecode.base.baseActivity.BaseActivityDefault;
+import com.gzeinnumer.mybasecode.base.baseActivity.BaseActivityWhiteBlackNavigation;
 import com.gzeinnumer.mybasecode.ui.ColorNavigationActivity;
 import com.gzeinnumer.mybasecode.ui.DefaultActivity;
 import com.gzeinnumer.mybasecode.ui.FullScreenActivity;
 import com.gzeinnumer.mybasecode.ui.FullScreenColorActivity;
 import com.gzeinnumer.mybasecode.ui.WhiteNavigationActivity;
 
-public class MainActivity extends BaseActivityDefault {
+public class MainActivity extends BaseActivityWhiteBlackNavigation {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
