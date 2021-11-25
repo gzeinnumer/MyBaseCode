@@ -2,6 +2,7 @@ package com.gzeinnumer.mybasecode.base;
 
 import android.content.Intent;
 import android.os.Build;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -94,5 +95,21 @@ public class BaseFragment extends Fragment {
 
     protected MultiDatePickerDialog datePickerMultiChild() {
         return BasePopUp.datePickerMulti(getChildFragmentManager(), requireActivity());
+    }
+
+    protected void enableEditText(EditText... editTexts) {
+        for (EditText ed : editTexts) {
+            ed.setFocusableInTouchMode(true);
+            ed.setFocusable(true);
+            ed.setEnabled(true);
+        }
+    }
+
+    protected void disableEditText(EditText... editTexts) {
+        for (EditText ed : editTexts) {
+            ed.setFocusableInTouchMode(false);
+            ed.setFocusable(false);
+            ed.setEnabled(false);
+        }
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -102,4 +103,23 @@ public class BaseActivity extends BasePermissionActivity {
         return BasePopUp.datePickerMulti(getSupportFragmentManager(), this);
     }
 
+    protected void debugDialog(String smg) {
+        onShowInfoDialog().setTitle("Debug").setContent(smg).setCanceledOnTouchOutside(true).autoDismisOnSecond(-1).show();
+    }
+
+    protected void enableEditText(EditText... editTexts) {
+        for (EditText ed : editTexts) {
+            ed.setFocusableInTouchMode(true);
+            ed.setFocusable(true);
+            ed.setEnabled(true);
+        }
+    }
+
+    protected void disableEditText(EditText... editTexts) {
+        for (EditText ed : editTexts) {
+            ed.setFocusableInTouchMode(false);
+            ed.setFocusable(false);
+            ed.setEnabled(false);
+        }
+    }
 }

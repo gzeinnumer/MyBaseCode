@@ -4,6 +4,7 @@ import static maes.tech.intentanim.CustomIntent.customType;
 
 import android.content.Intent;
 import android.os.Build;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.gzeinnumer.da.dialog.confirmDialog.ConfirmDialog;
@@ -102,5 +103,21 @@ public class BaseDialogFragment extends MyLibDialog {
 
     protected MultiDatePickerDialog datePickerMultiChild() {
         return BasePopUp.datePickerMulti(getChildFragmentManager(), requireActivity());
+    }
+
+    protected void enableEditText(EditText... editTexts) {
+        for (EditText ed : editTexts) {
+            ed.setFocusableInTouchMode(true);
+            ed.setFocusable(true);
+            ed.setEnabled(true);
+        }
+    }
+
+    protected void disableEditText(EditText... editTexts) {
+        for (EditText ed : editTexts) {
+            ed.setFocusableInTouchMode(false);
+            ed.setFocusable(false);
+            ed.setEnabled(false);
+        }
     }
 }
