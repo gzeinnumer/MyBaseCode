@@ -15,7 +15,6 @@ import com.gzeinnumer.da.dialog.datePickerDialog.single.SingleDatePickerDialog;
 import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
 import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
 import com.gzeinnumer.mybasecode.base.activity.BasePermissionActivity;
-import com.gzeinnumer.mybasecode.utils.BaseConstant;
 import com.gzeinnumer.mybasecode.utils.GblFunction;
 
 import static maes.tech.intentanim.CustomIntent.customType;

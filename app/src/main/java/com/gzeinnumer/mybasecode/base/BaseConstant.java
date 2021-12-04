@@ -1,4 +1,4 @@
-package com.gzeinnumer.mybasecode.utils;
+package com.gzeinnumer.mybasecode.base;
 
 public class BaseConstant {
 

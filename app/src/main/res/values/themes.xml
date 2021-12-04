@@ -15,18 +15,6 @@
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
-    <style name="Theme.MyBaseCode.White">
-        <item name="android:fitsSystemWindows">false</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
-        <item name="android:navigationBarColor">@android:color/white</item>
-    </style>
-
-    <style name="Theme.MyBaseCode.Color">
-        <item name="android:statusBarColor" tools:targetApi="l">@android:color/holo_green_light
-        </item>
-        <item name="android:navigationBarColor">?attr/colorPrimaryVariant</item>
-    </style>
-
     <style name="Theme.MyBaseCode.FullScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:fitsSystemWindows">false</item>
@@ -59,5 +47,44 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
         <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Theme.MyBaseCode.White">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/white
+        </item>
+    </style>
+
+    <style name="Theme.MyBaseCode.WhiteV3">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/white_low_v3
+        </item>
+    </style>
+
+    <style name="Theme.MyBaseCode.White.8">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">#215CCAA2</item>
+    </style>
+
+    <style name="Theme.MyBaseCode.White.Primary">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimary
+        </item>
+    </style>
+
+    <style name="Theme.MyBaseCode.Primary">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimary</item>
+    </style>
+
+    <style name="Theme.MyBaseCode.Primary.White">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/white</item>
     </style>
 </resources>

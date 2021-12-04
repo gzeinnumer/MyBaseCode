@@ -48,12 +48,12 @@ dependencies {
     //intent animation
     implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
 
-    implementation 'com.github.gzeinnumer:DialogAndroid:3.3.0'
+    // dexter runtime permissions
+    implementation 'com.karumi:dexter:4.2.0'
+
+    implementation 'com.github.gzeinnumer:DialogAndroid:3.3.1'
     implementation 'com.github.gzeinnumer:SimpleMaterialStyle:2.3.3'
     implementation 'com.github.gzeinnumer:EasyDialogFragment:2.1.0'
     implementation 'com.github.gzeinnumer:BaseUtils:1.1.0'
     implementation 'com.github.gzeinnumer:EasyExternalDirectoryAndroid:2.2.0'
-
-    // dexter runtime permissions
-    implementation 'com.karumi:dexter:4.2.0'
 }
