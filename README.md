@@ -3,12 +3,15 @@
 - app
   - base
     - [BaseActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseActivity.java)
-    - baseActivity
+    - activity
       - [BaseActivityBlackBlackNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityBlackBlackNavigation.java)
       - [BaseActivityBlackWhiteNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityBlackWhiteNavigation.java)
       - [BaseActivityFullScreenWhiteBlack.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityFullScreenWhiteBlack.java)
       - [BaseActivityFullScreenWhiteWhite.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityFullScreenWhiteWhite.java)
       - [BaseActivityWhiteBlackNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BaseActivityWhiteBlackNavigation.java)
+      - [BasePermissionActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/baseActivity/BasePermissionActivity.java)
+    - dialog
+      - []()
     - [BaseDialogFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseDialogFragment.java)
     - [BaseFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseFragment.java)
     - [BasePopUp.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BasePopUp.java)

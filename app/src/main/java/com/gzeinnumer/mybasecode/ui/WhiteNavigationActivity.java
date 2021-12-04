@@ -3,7 +3,7 @@ package com.gzeinnumer.mybasecode.ui;
 import android.os.Bundle;
 
 import com.gzeinnumer.mybasecode.R;
-import com.gzeinnumer.mybasecode.base.baseActivity.BaseActivityBlackBlackNavigation;
+import com.gzeinnumer.mybasecode.base.activity.BaseActivityBlackBlackNavigation;
 
 public class WhiteNavigationActivity extends BaseActivityBlackBlackNavigation {
 

@@ -1,4 +1,4 @@
-package com.gzeinnumer.mybasecode.base.baseActivity;
+package com.gzeinnumer.mybasecode.base.activity;
 
 import android.os.Build;
 import android.os.Bundle;

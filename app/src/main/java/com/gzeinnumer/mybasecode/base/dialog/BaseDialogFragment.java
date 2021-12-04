@@ -1,4 +1,4 @@
-package com.gzeinnumer.mybasecode.base;
+package com.gzeinnumer.mybasecode.base.dialog;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
@@ -14,6 +14,7 @@ import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
 import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
 import com.gzeinnumer.edf.MyLibDialog;
 import com.gzeinnumer.mybasecode.R;
+import com.gzeinnumer.mybasecode.base.BasePopUp;
 import com.gzeinnumer.mybasecode.utils.BaseConstant;
 
 public class BaseDialogFragment extends MyLibDialog {

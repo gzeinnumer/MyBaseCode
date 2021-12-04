@@ -8,8 +8,9 @@ import java.util.List;
 /*
 {
    "status" : "1",
+   "title" : "Success",
    "message" : "Success",
-   "total" : "total"
+   "total" : 2
    "data" : [
       {
          "" : "",
@@ -31,6 +32,9 @@ public class BaseListResponse<T> {
     @SerializedName("status")
     private String status;
 
+    @SerializedName("title")
+    private String title;
+
     @SerializedName("message")
     private String message;
 
@@ -42,6 +46,10 @@ public class BaseListResponse<T> {
 
     public String getStatus() {
         return status;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public String getMessage() {

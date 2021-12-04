@@ -2,10 +2,8 @@ package com.gzeinnumer.mybasecode.ui;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.gzeinnumer.mybasecode.R;
-import com.gzeinnumer.mybasecode.base.baseActivity.BaseActivityWhiteBlackNavigation;
+import com.gzeinnumer.mybasecode.base.activity.BaseActivityWhiteBlackNavigation;
 
 public class DefaultActivity extends BaseActivityWhiteBlackNavigation {
 

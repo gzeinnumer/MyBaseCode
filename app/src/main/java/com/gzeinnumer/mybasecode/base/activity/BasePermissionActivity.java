@@ -1,4 +1,4 @@
-package com.gzeinnumer.mybasecode.base;
+package com.gzeinnumer.mybasecode.base.activity;
 
 import android.Manifest;
 import android.widget.Toast;

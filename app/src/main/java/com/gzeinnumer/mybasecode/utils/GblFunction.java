@@ -23,7 +23,7 @@ public class GblFunction {
     public static final String TAG = "GblFunction";
 
     public static void debugLocationActivity(Context applicationContext, String simpleName) {
-        if (BuildConfig.DEBUG) {
+        if (isDebugActive()) {
             Toast.makeText(applicationContext, simpleName, Toast.LENGTH_SHORT).show();
         }
     }
@@ -102,6 +102,22 @@ public class GblFunction {
         long fileSizeInMB = fileSizeInKB / 1024;
 
         return fileSizeInMB <= 20;
+    }
+
+    public static String messageRelease(String debug) {
+        if (isDebugActive()) {
+            return debug;
+        } else {
+            return "Telah terjadi kesalahan. Silahkan mencoba beberapa saat lagi";
+        }
+    }
+
+    public static String dummyOrDebug(){
+        if (isDebugActive()) {
+            return "resource.get()";
+        } else {
+            return "-";
+        }
     }
 
     /**

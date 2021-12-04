@@ -1,4 +1,4 @@
-package com.gzeinnumer.mybasecode.base;
+package com.gzeinnumer.mybasecode.base.dialog;
 
 import android.view.Gravity;
 

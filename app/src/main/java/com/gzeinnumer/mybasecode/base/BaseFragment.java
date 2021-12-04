@@ -97,6 +97,10 @@ public class BaseFragment extends Fragment {
         return BasePopUp.datePickerMulti(getChildFragmentManager(), requireActivity());
     }
 
+    protected void debugDialog(String smg) {
+        onShowInfoDialog().setTitle("Debug").setContent(smg).setCanceledOnTouchOutside(true).autoDismisOnSecond(-1).show();
+    }
+
     protected void enableEditText(EditText... editTexts) {
         for (EditText ed : editTexts) {
             ed.setFocusableInTouchMode(true);

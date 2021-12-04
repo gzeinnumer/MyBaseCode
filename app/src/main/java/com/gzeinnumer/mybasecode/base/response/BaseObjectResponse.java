@@ -6,7 +6,9 @@ import com.google.gson.annotations.SerializedName;
 /*
 {
    "status" : "1",
+   "title" : "Success",
    "message" : "Success",
+   "total" : 2
    "data" : {
       "" : "",
       "" : "",
@@ -23,8 +25,14 @@ public class BaseObjectResponse<T> {
     @SerializedName("status")
     private String status;
 
+    @SerializedName("title")
+    private String title;
+
     @SerializedName("message")
     private String message;
+
+    @SerializedName("total")
+    private int total;
 
     @SerializedName("data")
     private T data;
@@ -33,8 +41,16 @@ public class BaseObjectResponse<T> {
         return status;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public String getMessage() {
         return message;
+    }
+
+    public int getTotal() {
+        return total;
     }
 
     public T getData() {
