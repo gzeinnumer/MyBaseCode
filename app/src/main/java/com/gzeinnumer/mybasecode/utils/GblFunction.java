@@ -1,5 +1,8 @@
 package com.gzeinnumer.mybasecode.utils;
 
+import static com.gzeinnumer.mybasecode.base.BaseConstant.MATA_UANG;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -15,6 +18,12 @@ import com.gzeinnumer.mybasecode.BuildConfig;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -135,5 +144,112 @@ public class GblFunction {
             Log.d(TAG, "convertToBase64WithDataImage: " + e.getMessage());
             return " ";
         }
+    }
+
+    public static String getYesterday(int count) {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, count);
+        Date date = cal.getTime();
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+        return format1.format(date);
+    }
+
+    public static String getTomorrow(int count) {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, count);
+        Date date = cal.getTime();
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+        return format1.format(date);
+    }
+
+    public static String prettyCount(Number number) {
+        try{
+            char[] suffix = {' ', 'k', 'M', 'B', 'T', 'P', 'E'};
+            long numValue = number.longValue();
+            int value = (int) Math.floor(Math.log10(numValue));
+            int base = value / 3;
+            if (value >= 3 && base < suffix.length) {
+                return new DecimalFormat("#0").format(numValue / Math.pow(10, base * 3)) + suffix[base];
+            } else {
+                return new DecimalFormat("##0").format(numValue);
+            }
+        }  catch (Exception e){
+            return String.valueOf(number);
+        }
+    }
+
+    public static String realNumberInt(String cureencyValue) {
+        if (cureencyValue == null || cureencyValue.equals("")) {
+            return "0";
+        } else {
+            return cureencyValue.replace(".","").replace(",00","");
+        }
+    }
+
+    public static String saparator(String value) {
+        if (value == null || value.equals("")) {
+            return "0";
+        }
+        value = idrComma(value);
+        return value.substring(0, value.indexOf(","));
+    }
+
+    public static String idrComma(String value) {
+        if (value == null || value.equals("")) {
+            return "0";
+        } else {
+            Locale localeID = new Locale("in", "ID");
+            NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
+            return formatRupiah.format(Double.valueOf(value)).replace(MATA_UANG.trim(), "");
+        }
+    }
+
+    public static String idr(String value) {
+        return MATA_UANG + idrComma(value).replace(",00","");
+    }
+
+    public static String saveMessage(String debug, String realese) {
+        if (BuildConfig.DEBUG) {
+            return debug;
+        } else {
+            return realese;
+        }
+    }
+
+    public static String s(Object str) {
+        return String.valueOf(str);
+    }
+
+    public static String getDate() {
+        return MBUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault());
+    }
+
+    public static String dateOnly(String time) {
+        if (time == null){
+            return "-";
+        }
+        String reformatOneString = MBUtilsDate.reformatDate(
+                time,
+                "yyyy-MM-dd HH:mm:ss",
+                "yyyy-MM-dd",
+                Locale.getDefault()
+        );
+        return reformatOneString;
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    public static boolean checkBetween(String dateToCheck, String startDate, String endDate) {
+        boolean res = false;
+        SimpleDateFormat fmt1 = new SimpleDateFormat("yyyy-MM-dd"); //22-05-2013
+        SimpleDateFormat fmt2 = new SimpleDateFormat("yyyy-MM-dd"); //22-05-2013
+        try {
+            Date requestDate = fmt2.parse(dateToCheck);
+            Date fromDate = fmt1.parse(startDate);
+            Date toDate = fmt1.parse(endDate);
+            res = requestDate.compareTo(fromDate) >= 0 && requestDate.compareTo(toDate) <= 0;
+        } catch (ParseException pex) {
+            pex.printStackTrace();
+        }
+        return res;
     }
 }

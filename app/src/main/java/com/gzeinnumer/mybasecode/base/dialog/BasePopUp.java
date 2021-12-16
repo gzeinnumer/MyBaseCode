@@ -1,4 +1,4 @@
-package com.gzeinnumer.mybasecode.base;
+package com.gzeinnumer.mybasecode.base.dialog;
 
 import android.content.Context;
 import android.view.Gravity;
@@ -79,6 +79,18 @@ public class BasePopUp {
         text.setText(msg);
         Toast toast = new Toast(context);
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
+    }
+
+    public static void onShowCustomToastTop(FragmentActivity fragmentActivity, Context context, String msg) {
+        LayoutInflater inflater = fragmentActivity.getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_red, fragmentActivity.findViewById(R.id.custom_toast_layout_id));
+        TextView text = layout.findViewById(R.id.text);
+        text.setText(msg);
+        Toast toast = new Toast(context);
+        toast.setGravity(Gravity.TOP, 16, 0);
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(layout);
         toast.show();

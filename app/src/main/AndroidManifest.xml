@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyBaseCode">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +21,7 @@
             android:theme="@style/Theme.MyBaseCode.White" />
         <activity
             android:name=".ui.ColorNavigationActivity"
-            android:theme="@style/Theme.MyBaseCode.Color" />
+            android:theme="@style/Theme.MyBaseCode.Primary" />
         <activity
             android:name=".ui.FullScreenActivity"
             android:theme="@style/Theme.MyBaseCode.FullScreen" />
@@ -30,5 +30,4 @@
             android:theme="@style/Theme.MyBaseCode.FullScreen.Color" />
         <activity android:name=".ui.DefaultActivity" />
     </application>
-
 </manifest>

@@ -3,6 +3,7 @@ package com.gzeinnumer.mybasecode.base.dialog;
 import android.view.Gravity;
 
 import com.gzeinnumer.mybasecode.R;
+import com.gzeinnumer.mybasecode.base.BaseDialogFragment;
 
 public class BaseFilterDialogFragment extends BaseDialogFragment {
     public BaseFilterDialogFragment() {

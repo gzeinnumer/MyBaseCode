@@ -39,7 +39,7 @@ public class BaseListResponse<T> {
     private String message;
 
     @SerializedName("total")
-    private String total;
+    private int total;
 
     @SerializedName("data")
     private List<T> data;
@@ -56,7 +56,7 @@ public class BaseListResponse<T> {
         return message;
     }
 
-    public String getTotal() {
+    public int getTotal() {
         return total;
     }
 

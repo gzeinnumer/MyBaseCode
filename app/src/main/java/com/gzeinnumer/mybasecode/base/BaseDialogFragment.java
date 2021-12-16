@@ -1,5 +1,7 @@
 package com.gzeinnumer.mybasecode.base;
 
+import static maes.tech.intentanim.CustomIntent.customType;
+
 import android.content.Intent;
 import android.os.Build;
 import android.view.View;
@@ -15,29 +17,28 @@ import com.gzeinnumer.da.dialog.datePickerDialog.multi.MultiDatePickerDialog;
 import com.gzeinnumer.da.dialog.datePickerDialog.single.SingleDatePickerDialog;
 import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
 import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
-import com.gzeinnumer.mybasecode.base.activity.BasePermissionActivity;
+import com.gzeinnumer.edf.MyLibDialog;
+import com.gzeinnumer.mybasecode.R;
 import com.gzeinnumer.mybasecode.base.dialog.BasePopUp;
 import com.gzeinnumer.mybasecode.base.interfaceMethod.IBaseActivity;
+import com.gzeinnumer.mybasecode.base.interfaceMethod.IBaseFragment;
 import com.gzeinnumer.mybasecode.utils.GblFunction;
 
-import static maes.tech.intentanim.CustomIntent.customType;
-
-public class BaseActivity extends BasePermissionActivity implements IBaseActivity {
-
+public class BaseDialogFragment extends MyLibDialog implements IBaseActivity, IBaseFragment {
     private LoadingDialog loadingDialog;
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            customType(this, BaseConstant.INTENT_ANIM_TYPE);
-        }
+    public BaseDialogFragment() {
+        super(R.style.CustomDialogStyle);
+    }
+
+    public BaseDialogFragment(int style) {
+        super(style);
     }
 
     @Override
     public void debugLocationActivity(View v, String TAG) {
         v.setOnClickListener(view -> {
-            GblFunction.debugLocationActivity(getApplicationContext(), TAG);
+            GblFunction.debugLocationActivity(requireContext(), TAG);
         });
     }
 
@@ -48,9 +49,9 @@ public class BaseActivity extends BasePermissionActivity implements IBaseActivit
 
     @Override
     public void intentTo(Class<?> clss) {
-        startActivity(new Intent(getApplicationContext(), clss));
+        startActivity(new Intent(requireContext(), clss));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            customType(this, BaseConstant.INTENT_ANIM_TYPE);
+            customType(requireContext(), BaseConstant.INTENT_ANIM_TYPE);
         }
     }
 
@@ -58,38 +59,44 @@ public class BaseActivity extends BasePermissionActivity implements IBaseActivit
     public void intentToPut(Intent intent) {
         startActivity(intent);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            customType(this, BaseConstant.INTENT_ANIM_TYPE);
+            customType(requireContext(), BaseConstant.INTENT_ANIM_TYPE);
         }
     }
 
     @Override
     public void onToast(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onToastLong(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onToastLongCenter(String msg) {
-        BasePopUp.onToastLongCenter(getApplicationContext(), msg);
+        BasePopUp.onToastLongCenter(getContext(), msg);
     }
 
     @Override
     public void onShowCustomToast(String msg) {
-        BasePopUp.onShowCustomToast(this, getApplicationContext(), msg);
+        BasePopUp.onShowCustomToast(requireActivity(), requireContext(), msg);
     }
 
     @Override
     public void onShowCustomToastTop(String msg) {
-        BasePopUp.onShowCustomToastTop(this, getApplicationContext(), msg);
+        BasePopUp.onShowCustomToastTop(requireActivity(), requireContext(), msg);
     }
 
     @Override
     public void onShowLoading() {
-        loadingDialog = BasePopUp.onShowLoading(getSupportFragmentManager(), this);
+        loadingDialog = BasePopUp.onShowLoading(getChildFragmentManager(), requireActivity());
+        loadingDialog.show();
+    }
+
+    @Override
+    public void onShowLoadingChild() {
+        loadingDialog = BasePopUp.onShowLoading(getChildFragmentManager(), requireActivity());
         loadingDialog.show();
     }
 
@@ -102,22 +109,42 @@ public class BaseActivity extends BasePermissionActivity implements IBaseActivit
 
     @Override
     public ConfirmDialog onShowConfirmDialog() {
-        return BasePopUp.onShowConfirmDialog(getSupportFragmentManager(), this);
+        return BasePopUp.onShowConfirmDialog(getChildFragmentManager(), requireActivity());
+    }
+
+    @Override
+    public ConfirmDialog onShowConfirmDialogChild() {
+        return BasePopUp.onShowConfirmDialog(getChildFragmentManager(), requireActivity());
     }
 
     @Override
     public InfoDialog onShowInfoDialog() {
-        return BasePopUp.onShowInfoDialog(getSupportFragmentManager(), this);
+        return BasePopUp.onShowInfoDialog(getChildFragmentManager(), requireActivity());
+    }
+
+    @Override
+    public InfoDialog onShowInfoDialogChild() {
+        return BasePopUp.onShowInfoDialog(getChildFragmentManager(), requireActivity());
     }
 
     @Override
     public SingleDatePickerDialog datePickerSingle() {
-        return BasePopUp.datePickerSingle(getSupportFragmentManager(), this);
+        return BasePopUp.datePickerSingle(requireActivity().getSupportFragmentManager(), requireActivity());
+    }
+
+    @Override
+    public SingleDatePickerDialog datePickerSingleChild() {
+        return BasePopUp.datePickerSingle(getChildFragmentManager(), requireActivity());
     }
 
     @Override
     public MultiDatePickerDialog datePickerMulti() {
-        return BasePopUp.datePickerMulti(getSupportFragmentManager(), this);
+        return BasePopUp.datePickerMulti(requireActivity().getSupportFragmentManager(), requireActivity());
+    }
+
+    @Override
+    public MultiDatePickerDialog datePickerMultiChild() {
+        return BasePopUp.datePickerMulti(getChildFragmentManager(), requireActivity());
     }
 
     @Override
@@ -169,6 +196,6 @@ public class BaseActivity extends BasePermissionActivity implements IBaseActivit
 
     @Override
     public int xmlColor(int idColor) {
-        return ContextCompat.getColor(getApplicationContext(), idColor);
+        return ContextCompat.getColor(requireContext(), idColor);
     }
 }
