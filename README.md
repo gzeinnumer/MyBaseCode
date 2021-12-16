@@ -3,7 +3,6 @@
 - [AndroidManifest.xml](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/AndroidManifest.xml)
 - app
   - base
-    - [BaseActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseActivity.java)
     - activity
       - [BaseActivityBlackBlackNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityBlackBlackNavigation.java)
       - [BaseActivityBlackWhiteNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityBlackWhiteNavigation.java)
@@ -12,8 +11,11 @@
       - [BaseActivityWhiteBlackNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityWhiteBlackNavigation.java)
       - [BasePermissionActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BasePermissionActivity.java)
     - dialog
-      - [BaseDialogFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/dialog/BaseDialogFragment.java)
       - [BaseFilterDialogFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/dialog/BaseFilterDialogFragment.java)
+      - [BasePopUp.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/dialog/BasePopUp.java)
+    - interfaceMethod
+      - [IBaseActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/interfaceMethod/IBaseActivity.java)
+      - [IBaseFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/interfaceMethod/IBaseFragment.java)
     - response
       - [BaseHttpCode.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/response/BaseHttpCode.java)
       - [BaseListResponse.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/response/BaseListResponse.java)
@@ -21,8 +23,8 @@
     - [BaseActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseActivity.java)
     - [BaseCallBack.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseCallBack.java)
     - [BaseConstant.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseConstant.java)
+    - [BaseDialogFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseDialogFragment.java)
     - [BaseFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseFragment.java)
-    - [BasePopUp.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BasePopUp.java)
     - [BaseResource.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseResource.java)
   - utils
     - [GblFunction.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/utils/GblFunction.java)
@@ -30,6 +32,7 @@
   - [drawable](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/res/drawable)
   - layout
     - [toast_white.xml](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/res/layout/toast_white.xml)
+    - [toast_red.xml](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/res/layout/toast_red.xml)
   - value
     - [colors.xml](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/res/values/colors.xml)
     - [strings.xml](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/res/values/strings.xml)
