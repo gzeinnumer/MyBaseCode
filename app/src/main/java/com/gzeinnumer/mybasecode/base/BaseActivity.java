@@ -1,9 +1,12 @@
 package com.gzeinnumer.mybasecode.base;
 
+import static com.gzeinnumer.mybasecode.utils.GblFunction.isDebugActive;
+
 import android.content.Intent;
 import android.os.Build;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
@@ -13,8 +16,10 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.gzeinnumer.da.dialog.confirmDialog.ConfirmDialog;
 import com.gzeinnumer.da.dialog.datePickerDialog.multi.MultiDatePickerDialog;
 import com.gzeinnumer.da.dialog.datePickerDialog.single.SingleDatePickerDialog;
+import com.gzeinnumer.da.dialog.debug.DebugDialog;
 import com.gzeinnumer.da.dialog.infoDialog.InfoDialog;
 import com.gzeinnumer.da.dialog.loadingDialog.LoadingDialog;
+import com.gzeinnumer.mybasecode.R;
 import com.gzeinnumer.mybasecode.base.activity.BasePermissionActivity;
 import com.gzeinnumer.mybasecode.base.dialog.BasePopUp;
 import com.gzeinnumer.mybasecode.base.interfaceMethod.IBaseActivity;
@@ -43,7 +48,14 @@ public class BaseActivity extends BasePermissionActivity implements IBaseActivit
 
     @Override
     public void debugDialog(String smg) {
-        onShowInfoDialog().setTitle("Debug").setContent(smg).setCanceledOnTouchOutside(true).autoDismisOnSecond(-1).show();
+        if (isDebugActive())
+            new DebugDialog(getSupportFragmentManager())
+                    .setAnimationStyle(R.style.CustomDialogStyle)
+                    .setContent(smg)
+                    .onOkPressedCallBack(() -> {
+                        //ok action
+                    })
+                    .show();
     }
 
     @Override
@@ -170,5 +182,19 @@ public class BaseActivity extends BasePermissionActivity implements IBaseActivit
     @Override
     public int xmlColor(int idColor) {
         return ContextCompat.getColor(getApplicationContext(), idColor);
+    }
+
+    protected void onShowCustomToastDummy(){
+        onShowCustomToast("message");
+    }
+
+    @Override
+    public void onShowInfoDialogError(String title, String message) {
+        BasePopUp.onShowInfoDialog(getSupportFragmentManager(), this).autoDismisOnSecond(-1).setTitle(title).setContent(message).show();
+    }
+
+    @Override
+    public void fabDebug(LinearLayout llFab, String... tables) {
+
     }
 }

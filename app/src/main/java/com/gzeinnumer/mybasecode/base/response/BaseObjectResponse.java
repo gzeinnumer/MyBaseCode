@@ -5,15 +5,22 @@ import com.google.gson.annotations.SerializedName;
 
 /*
 {
-   "status" : "1",
-   "title" : "Success",
-   "message" : "Success",
-   "total" : 2
-   "data" : {
-      "" : "",
-      "" : "",
-      "" : ""
-   }
+    "status": 1,
+    "title": "Perhatian",
+    "message": "Success",
+    "info": {
+        "total": 1,
+        "totalPage": null,
+        "page": null,
+        "next": null,
+        "prev": null
+    },
+    "data": {
+        "id": 1,
+        "name": "zein",
+        "created_at": "2022-01-09 14:53:35",
+        "updated_at": "2022-01-09 21:54:14"
+    }
 }
 */
 /*
@@ -22,8 +29,8 @@ Call<Response<BaseObjectResponse<ResponseLogin>>> getUserCall();
  */
 public class BaseObjectResponse<T> {
 
-    @SerializedName("status")
-    private String status;
+    @SerializedName("data")
+    private T data;
 
     @SerializedName("title")
     private String title;
@@ -31,29 +38,29 @@ public class BaseObjectResponse<T> {
     @SerializedName("message")
     private String message;
 
-    @SerializedName("total")
-    private int total;
+    @SerializedName("status")
+    private int status;
 
-    @SerializedName("data")
-    private T data;
+    @SerializedName("info")
+    private Info info;
 
-    public String getStatus() {
-        return status;
+    public T getData(){
+        return data;
     }
 
-    public String getTitle() {
+    public String getTitle(){
         return title;
     }
 
-    public String getMessage() {
+    public String getMessage(){
         return message;
     }
 
-    public int getTotal() {
-        return total;
+    public int getStatus(){
+        return status;
     }
 
-    public T getData() {
-        return data;
+    public Info getInfo(){
+        return info;
     }
 }

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
@@ -197,5 +198,15 @@ public class BaseDialogFragment extends MyLibDialog implements IBaseActivity, IB
     @Override
     public int xmlColor(int idColor) {
         return ContextCompat.getColor(requireContext(), idColor);
+    }
+
+    @Override
+    public void onShowInfoDialogError(String title, String message) {
+
+    }
+
+    @Override
+    public void fabDebug(LinearLayout llFab, String... tables) {
+
     }
 }

@@ -3,6 +3,7 @@ package com.gzeinnumer.mybasecode.base.interfaceMethod;
 import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -45,4 +46,6 @@ public interface IBaseActivity {
 
     String xmlString(int idString);
     int xmlColor(int idColor);
+    void onShowInfoDialogError(String title, String message);
+    void fabDebug(LinearLayout llFab, String... tables);
 }

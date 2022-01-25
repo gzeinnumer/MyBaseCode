@@ -21,7 +21,7 @@
       - [BaseListResponse.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/response/BaseListResponse.java)
       - [BaseObjectResponse.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/response/BaseObjectResponse.java)
     - [BaseActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseActivity.java)
-    - [BaseCallBack.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseCallBack.java)
+    - [BaseCallBackClick.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseCallBackClick.java)
     - [BaseConstant.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseConstant.java)
     - [BaseDialogFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseDialogFragment.java)
     - [BaseFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseFragment.java)

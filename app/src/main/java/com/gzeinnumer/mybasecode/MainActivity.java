@@ -21,5 +21,6 @@ public class MainActivity extends BaseActivityWhiteBlackNavigation {
         findViewById(R.id.btn3).setOnClickListener(v -> intentTo(FullScreenActivity.class));
         findViewById(R.id.btn4).setOnClickListener(v -> intentTo(FullScreenColorActivity.class));
         findViewById(R.id.btn5).setOnClickListener(v -> intentTo(DefaultActivity.class));
+        findViewById(R.id.btn6).setOnClickListener(v -> debugDialog("{name:zein}"));
     }
 }

@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/VIDEO/PEMOGRAMANMOBILE/0000.00.00 Base/MyBaseCode/app/src/main/res/drawable/pdb_ic_baseline_playlist_add_check_24.xml" value="0.1" />
+        <entry key="..\:/VIDEO/PEMOGRAMANMOBILE/0000.00.00 Base/MyBaseCode/app/src/main/res/drawable/pdb_rounded_corner_dlm_top.xml" value="0.1" />
+        <entry key="..\:/VIDEO/PEMOGRAMANMOBILE/0000.00.00 Base/MyBaseCode/app/src/main/res/layout/activity_main.xml" value="0.225" />
+        <entry key="..\:/VIDEO/PEMOGRAMANMOBILE/0000.00.00 Base/MyBaseCode/app/src/main/res/layout/activity_white_navigation.xml" value="0.225" />
+        <entry key="..\:/VIDEO/PEMOGRAMANMOBILE/0000.00.00 Base/MyBaseCode/app/src/main/res/layout/pdb_dialog_table.xml" value="0.1" />
         <entry key="..\:/VIDEO/PEMOGRAMANMOBILE/0000.00.00 Base/MyBaseCode/app/src/main/res/layout/toast_red.xml" value="0.225" />
         <entry key="..\:/VIDEO/PEMOGRAMANMOBILE/0000.00.00 Base/MyBaseCode/app/src/main/res/layout/toast_white.xml" value="0.225" />
+        <entry key="..\:/VIDEO/PEMOGRAMANMOBILE/0000.00.00 Base/MyBaseCode/app/src/main/res/layout/widget_table_debug.xml" value="0.225" />
         <entry key="..\:/VIDEO/PEMOGRAMANMOBILE/MyBaseCode/app/src/main/res/layout/activity_main.xml" value="0.225" />
       </map>
     </option>
