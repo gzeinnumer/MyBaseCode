@@ -20,6 +20,7 @@
       - [BaseHttpCode.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/response/BaseHttpCode.java)
       - [BaseListResponse.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/response/BaseListResponse.java)
       - [BaseObjectResponse.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/response/BaseObjectResponse.java)
+      - [Info.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/response/Info.java)
     - [BaseActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseActivity.java)
     - [BaseCallBackClick.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseCallBackClick.java)
     - [BaseConstant.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/BaseConstant.java)
