@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.gzeinnumer.mybasecode.R;
 import com.gzeinnumer.mybasecode.base.activity.BaseActivityBlackBlackNavigation;
 
+//android:theme="@style/Theme.MyBaseCode.White"
 public class WhiteNavigationActivity extends BaseActivityBlackBlackNavigation {
 
     @Override

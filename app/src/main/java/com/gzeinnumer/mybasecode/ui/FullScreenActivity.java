@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.gzeinnumer.mybasecode.R;
 import com.gzeinnumer.mybasecode.base.activity.BaseActivityFullScreenWhiteBlack;
 
+//android:theme="@style/Theme.MyBaseCode.FullScreen"
 public class FullScreenActivity extends BaseActivityFullScreenWhiteBlack {
 
     @Override

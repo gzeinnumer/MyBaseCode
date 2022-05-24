@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.gzeinnumer.mybasecode.base.BaseActivity;
 
+//android:theme="@style/Theme.MyBaseCode.FullScreen.Color"
 public class BaseActivityFullScreenWhiteWhite extends BaseActivity {
 
     @Override

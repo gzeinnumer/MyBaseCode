@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.gzeinnumer.mybasecode.base.BaseActivity;
 
+//android:theme="@style/Theme.MyBaseCode.FullScreen"
 public class BaseActivityFullScreenWhiteBlack extends BaseActivity {
 
     @Override

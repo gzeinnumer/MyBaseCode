@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 
 import com.gzeinnumer.mybasecode.base.BaseActivity;
 
+//android:theme="@style/Theme.MyBaseCode.White"
 public class BaseActivityBlackBlackNavigation extends BaseActivity {
 
     @Override
