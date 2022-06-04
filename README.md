@@ -4,11 +4,12 @@
 - app
   - base
     - activity
+      - [BaseActivityDefault.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityDefault.java)
       - [BaseActivityBlackBlackNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityBlackBlackNavigation.java) `android:theme="@style/Theme.MyBaseCode.White"`
       - [BaseActivityBlackWhiteNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityBlackWhiteNavigation.java) `android:theme="@style/Theme.MyBaseCode.Primary"`
       - [BaseActivityFullScreenWhiteBlack.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityFullScreenWhiteBlack.java) `android:theme="@style/Theme.MyBaseCode.FullScreen"`
       - [BaseActivityFullScreenWhiteWhite.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityFullScreenWhiteWhite.java) `android:theme="@style/Theme.MyBaseCode.FullScreen.Color"`
-      - [BaseActivityWhiteBlackNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityWhiteBlackNavigation.java)
+      - [BaseActivityWhiteBlackNavigation.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BaseActivityWhiteBlackNavigation.java) `android:theme="@style/Theme.MyBaseCode.Primary.White"`
       - [BasePermissionActivity.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/activity/BasePermissionActivity.java)
     - dialog
       - [BaseFilterDialogFragment.java](https://github.com/gzeinnumer/MyBaseCode/blob/master/app/src/main/java/com/gzeinnumer/mybasecode/base/dialog/BaseFilterDialogFragment.java)

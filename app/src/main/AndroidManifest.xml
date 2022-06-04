@@ -28,6 +28,8 @@
         <activity
             android:name=".ui.FullScreenColorActivity"
             android:theme="@style/Theme.MyBaseCode.FullScreen.Color" />
-        <activity android:name=".ui.DefaultActivity" />
+        <activity android:name=".ui.DefaultActivity"
+            android:theme="@style/Theme.MyBaseCode.Primary.White"
+            />
     </application>
 </manifest>
